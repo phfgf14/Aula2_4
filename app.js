@@ -1,8 +1,10 @@
+/* Imports */
 import express from 'express';
 import mongoose from 'mongoose';
 
 import { studentRouter } from './routes/studentRouter.js';
 
+/* Conexão com o MongoDB */
 // url para conexao base local
 const url = 'mongodb://localhost/grades';
 
