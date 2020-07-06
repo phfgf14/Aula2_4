@@ -49,22 +49,6 @@ app.patch('/student/:id', async (req, res) => {
   }
 });
 
-app.put('/student/:id', async (req, res) => {
-  try {
-    const student = await studentModel.findOneAndUpdate(
-      { _id: req.params.id },
-      req.body,
-      { new: true }
-    );
-    if (!student) {
-      res.status(404), send('Documento não encontrado na coleção');
-    }
-    res.send(student);
-  } catch (error) {
-    res.status(500).send(error);
-  }
-});
-
 app.get('/student/id', async (req, res) => {
   try {
     const student = await studentModel.find({ _id: req.params.id });
