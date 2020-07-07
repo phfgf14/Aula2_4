@@ -4,8 +4,6 @@ import mongoose from 'mongoose';
 
 import { studentRouter } from './routes/studentRouter.js';
 
-require('dotenv').config();
-
 /* Conexão com o MongoDB */
 // url para conexao base local
 // const url = 'mongodb://localhost/grades';
